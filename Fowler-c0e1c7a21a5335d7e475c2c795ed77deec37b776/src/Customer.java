@@ -13,6 +13,9 @@ class Customer {
     public void addRental(Rental arg) {
         rentals.addElement(arg);
     };
+    public void removeRental(Rental arg) {
+        rentals.removeElement(arg);
+    }
     public String getName (){
         return name;
     };
