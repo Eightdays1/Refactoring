@@ -4,10 +4,12 @@ public class Movie {
     public static final int NEW_RELEASE = 1;
     private String title;
     private int priceCode;
-    public Movie(String newtitle, int newpriceCode) {
-        title = newtitle;
-        priceCode = newpriceCode;
+    public Movie(String newTitle, int newPriceCode) {
+        this.setTitle(newTitle);
+        this.setNewPriceCode(newPriceCode);
     }
+    private void setTitle(String newTitle) {title = newTitle;}
+    private void setNewPriceCode(int newPriceCode) {priceCode = newPriceCode;}
     public int getPriceCode() {
         return priceCode;
     }

@@ -7,8 +7,8 @@ class Customer {
     private Vector rentals = new Vector();
     private int frequentRenterPoints;
     private double totalAmount;
-    public Customer (String newname){
-        name = newname;
+    public Customer (String newName){
+        name = newName;
     };
     public void addRental(Rental arg) {
         rentals.addElement(arg);
