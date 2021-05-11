@@ -34,14 +34,11 @@ class Customer {
     private String rentedMovies(Enumeration _enum_rentals){
         String _result = "";
         while (_enum_rentals.hasMoreElements()) {
-            double thisAmount = 0;
             Rental each = (Rental) _enum_rentals.nextElement();
-            //determine amounts for each line
-            thisAmount = amountFor(each);
             renterPoints(each);
             //show figures for this rental
-            _result += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(thisAmount) + "\n";
-            totalAmount += thisAmount;
+            _result += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(amountFor(each)) + "\n";
+            totalAmount += amountFor(each);
         }
         return _result;
     }
